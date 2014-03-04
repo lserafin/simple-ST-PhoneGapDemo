@@ -32,13 +32,17 @@
      *                                      //  - "delta" to enable over-the-air delta update for this file
      *                                      //  - "full" means full update will be made when this file changes
      *          "x-bootstrap": true         // (Optional)
-     *                                      // Indicates a development mode only dependency.  
+     *                                      // Indicates a development mode only dependency.
      *                                      // These files will not be copied into the build directory or referenced
      *                                      // in the generate app.json manifest for the micro loader.
      *
      *      }
      */
     "js": [
+		{
+			"path": "phonegap.js",
+			"remote": true
+		},
         {
             "path": "touch/sencha-touch.js",
             "x-bootstrap": true
@@ -103,6 +107,7 @@
      * Extra resources to be copied along when build
      */
     "resources": [
+		"config.xml",
         "resources/images",
         "resources/icons",
         "resources/startup"
